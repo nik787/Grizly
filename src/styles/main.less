@@ -166,8 +166,17 @@
             &_item {
                 .col();
                 .size(2);
+                align-self: stretch;
                 .catalog__item_img {
                     width: 100%;
+                    height: 100%;
+                }
+                .catalog__item_description {
+                    &-title a {
+                        color: @title;
+                        text-decoration: none;
+                        text-align: center;
+                    }
                 }
             }
         }
