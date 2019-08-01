@@ -2,6 +2,14 @@
 @import "color.less";
 @import "fonts.less";
 
+// примеси
+
+.title() {
+    font-size: 4vh;
+    text-align: center;
+    color: @title;
+    margin-top: 17vh;
+}
 
 .reset();
 
@@ -43,7 +51,7 @@
 
 .header {
     background: fixed  center / cover no-repeat rgba(0, 0, 0, 0.3) url(../images/header-bg.jpg);
-    height: 100vh;
+    min-height: 100vh;
     &::before {
         content: "";
         position: absolute;
@@ -51,6 +59,7 @@
         left: 0;
         right: 0;
         bottom: 0;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.4);
     }
     &__content {
@@ -61,19 +70,21 @@
         width: 70%;
         margin: 0 auto;
         &_title {
-            font-size: 62px;
+            font-size: 6vh;
+            line-height: 1;
             color: @header-title;
             
             
         }
         &_form {
             margin: 50px auto;
+            max-width: 300px;
             input, button {
                 display: block;
                 margin: 0 auto;
             }
             input {
-                font-size: 25px;
+                font-size: 3vh;
                 padding: 5px;
                 border-radius: 3px;
                 font-family: inherit;
@@ -100,7 +111,22 @@
         }
     }
 }
-
-section {
-    height: 200vh;
+.advantages {
+    &__title {
+        .title();
+    }
+    &__subtitle {
+        text-align: center;
+        font-size: 2vh;
+        margin-top: 3vh;
+    }
+    &__list {
+        .row-flex();
+        justify-content: space-between;
+        margin-top: 10vh;
+        &_item {
+            .col();
+            .size(5);
+        }
+    }
 }
