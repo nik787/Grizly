@@ -32,3 +32,9 @@ $(".navigation__list").on("click","a", function (event) {
 $('#form2-tel').on("click", function() {
     $('#form2-tel').attr({"value":"+7"})
 })
+
+$(".navigation__burger").on("click", function() {
+    $(".navigation__burger").toggleClass("is-active");
+    $(".navigation__list").toggleClass("active");
+
+})

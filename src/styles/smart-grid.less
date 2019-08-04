@@ -22,12 +22,18 @@
 @offset_xxs_one_side: (@offset_xxs / 2);
 
 @fields: 140px;
-@fields_sm: 5px;
-@fields_xs: 5px;
+@fields_lg: 40px;
+@fields_sm: 15px;
+@fields_xs: 15px;
 
 .wrapper-full(){
     padding-left: @fields;
     padding-right: @fields;
+
+    .lg-block({
+        padding-left: @fields_lg;
+        padding-right: @fields_lg;
+    });
 
     .sm-block({
         padding-left: @fields_sm;
@@ -453,7 +459,6 @@
         display: block;
     }
     img{
-        // max-width: 100%;
         height: auto;
     }
 }

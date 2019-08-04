@@ -65,9 +65,39 @@
         align-items: center;
         padding-top: 15px;
         padding-bottom: 15px;
+        @media screen and (max-width: @break_sm) {
+            .navigation__list {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                text-align: center;
+                right: -110%;
+                top: 15%;
+                width: 100%;
+                transition: all 0.5s;
+                
+                &_item {
+                    width: 100%;
+                    background: @menu;
+                    padding: 15px;
+                    border-bottom: 1px solid #000;
+                    transition: background 0.3s;
+                    &:hover {
+                        background: #000;
+                    }
+                    &:active {
+                        background: #000;
+                    }
+                }
+            }
+            .navigation__burger {
+                display: block;
+            }
+            
+        }
         &__list {
             .row-flex();
-
+            
             &_item {
                 margin: 0 40px 0 0;
                 color: @nav-item;
@@ -81,6 +111,73 @@
                 a {
                     color: inherit;
                     text-decoration: none;
+                }
+            }
+            &.active {
+                right: 8px;
+            }
+        }
+        &__burger {
+            display: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 75px;
+            height: 75px;
+            font-size: 0;
+            text-indent: -9999px;
+            appearance: none;
+            box-shadow: none;
+            border-radius: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            &:focus {
+                outline: none;
+            }
+            span {
+                display: block;
+                position: absolute;
+                top: 35px;
+                left: 18px;
+                right: 18px;
+                height: 3px;
+                background: white;
+                transition: transform 0.3s;
+                &::before {
+                    .after();
+                    top: -15px;
+                    transform-origin: top right;
+                    transition: transform 0.3s, width 0.3s, top 0.3s;
+                }
+                &::after {
+                    .after();
+                    bottom: -15px;
+                    transform-origin: bottom right;
+                    transition: transform 0.3s, width 0.3s, bottom 0.3s;
+                }
+                .after() {
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #fff;
+                    content: "";
+                }
+                
+            }
+            &.is-active {
+                span {
+                    transform: rotate(-180deg);
+                    &::before {
+                        width: 50%;
+                        transform: translateX(-4px) translateY(6px) rotate(-30deg);
+                    }
+                    &::after {
+                        width: 50%;
+                        transform: translateX(-4px) translateY(-5px) rotate(33deg);
+                    }
                 }
             }
         }
@@ -143,20 +240,38 @@
         .row-flex();
         justify-content: space-between;
         margin-top: 10vh;
+        @media screen and(max-width: @break_lg) {
+            .advantages__list_item:nth-child(odd) {
+                flex-direction: row-reverse;
+            }
+        }
+        @media screen and(max-width: @break_xs) {
+            .advantages__list_item, .advantages__list_item:nth-child(odd) {
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        
         &_item {
             .col();
             .size(6);
+            .size-lg(12);
             display: flex;
             align-items: flex-start;
             border: 1px solid gray;
             margin: 1vh auto;
             background: #eeeeee;
             padding: 10px;
-            .advantages__item_img img {
-                width: 200px !important;
+            .advantages__item_img {
+                width: 200px;
+                margin: 0 auto;
+                img {
+                    width: 200px;
+                }
             }
+            
             .advantages__item_description {
-                margin-left: 20px;
+                margin: 20px;
                 h3 {
                     .h3();
                 }
@@ -358,15 +473,24 @@
             .row-flex();
             margin-top: 70px;
             justify-content: center;
+            @media screen and (max-width: @break_sm) {
+                flex-direction: column-reverse;
+                .contacts__content_container {
+                    margin: 0 auto 50px;
+
+                }
+            }
             &_form {
                 .col();
                 .size(5);
+                .size-sm(12);
+                
                 input, textarea, button {
                     display: block;
                     resize: none;
                     padding: 15px;
                     width: 70%;
-                    margin: 15px 0;
+                    margin: 15px auto;
                 }
                 button {
                     width: 40%;
@@ -375,8 +499,9 @@
             &_container {
                 .col();
                 .size(5);
+                .size-sm(12);
                 .contact {
-
+                    
                 }
             }
         }
@@ -391,7 +516,14 @@
         color: #fff;
         padding-top: 25px;
         padding-bottom: 25px;
+        @media screen and (max-width: @break_sm) {
+            flex-direction: column;
+            text-align: center;
+            .footer__copyright {
+                margin-bottom: 30px;
+            }
 
+        }
         a {
             font-size: 0;
         }

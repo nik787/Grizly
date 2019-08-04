@@ -12,18 +12,19 @@ const settings = {
     },
     breakPoints: {
         lg: {
-            width: '1088px'
+            width: '1088px',
+            fields: '40px' 
         },
         slg: {
             width: '1004px'
         },
         sm: {
             width: '780px',
-            fields: '5px'
+            fields: '15px'
         },
         xs: {
             width: '560px',
-            fields: '5px'
+            fields: '15px'
         },
         xxs: {
             width: '320px'
