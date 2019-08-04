@@ -5,7 +5,7 @@
             .title();
         }
         &__list {
-            
+            position: relative;
             .size(10);
             margin: 70px auto 0;
             
@@ -44,6 +44,33 @@
         }
     }
     .owl-theme .owl-nav {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        .prev, .next {
+            display: block;
+            
+            width: 80px;
+        }
+        .owl-prev, .owl-next {
+            position: absolute;
+            transition: all 0.4s;
+            &:hover {
+                background: transparent;
+                transform: scale(1.2);
+            }
+        }
+        .owl-prev {
+            left: -100px;
+            transform: scaleX(-1);
+            &:hover {
+            transform: scaleX(-1) scale(1.2);
+
+            }
+        }
+        .owl-next {
+            right: -100px;
+        }
         
     }
 }
