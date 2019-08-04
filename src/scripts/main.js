@@ -14,7 +14,9 @@ $('.feedbacks__list').owlCarousel({
           items:1
       }
   }
-})
+});
+
+
 
 $(".navigation__list").on("click","a", function (event) {
     //забираем идентификатор бока с атрибута href
