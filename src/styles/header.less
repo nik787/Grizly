@@ -1,0 +1,42 @@
+.header {
+    background: fixed  center / cover no-repeat rgba(0, 0, 0, 0.3) url(../images/header-bg.jpg);
+    min-height: 100vh;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    &__content {
+        position: relative;
+        z-index: 9998;
+        text-align: center;
+        padding-top: 40vh;
+        width: 70%;
+        margin: 0 auto;
+        &_title {
+            .h1();
+        }
+        &_form {
+            margin: 50px auto;
+            max-width: 300px;
+            input, button {
+                display: block;
+                margin: 0 auto;
+            }
+            input {
+                font-size: 3vh;
+                padding: 5px;
+                border-radius: 3px;
+                font-family: inherit;
+            }
+            button {
+                .button();
+            }
+        }
+    }
+}
