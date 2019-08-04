@@ -6,7 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Regular.eot');
+            src: local('☺'), url('fonts/Roboto-Regular.woff') format('woff'), url('fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Bold.eot');
+            src: local('☺'), url('fonts/Roboto-Bold.woff') format('woff'), url('fonts/Roboto-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: bold;
+        }
+
+        body {
+            font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script async  src="scripts/main.js"></script>
+
 </head>
 <body>
     <nav id="navigation">
@@ -20,8 +41,8 @@
                 <ul class="navigation__list">
                     <li class="navigation__list_item"><a href="#">Главная</a></li>
                     <li class="navigation__list_item"><a href="#">Каталог</a></li>
-                    <li class="navigation__list_item"><a href="#">Отзывы</a></li>
-                    <li class="navigation__list_item"><a href="#">Контакты</a></li>
+                    <li class="navigation__list_item"><a href="#feedbacks">Отзывы</a></li>
+                    <li class="navigation__list_item"><a href="#contacts">Контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -183,11 +204,11 @@
                 <h2 class="feedbacks__title">
                     Отзывы
                 </h2>
-                <ul class="feedbacks__list">
+                <ul class="owl-carousel owl-theme feedbacks__list">
                     <li class="feedbacks__list_item">
                         <div class="feedback">
                             <div class="feedback__photo">
-                                <img src="#" alt="">
+                                <img src="images/feadback.jpg" alt="">
                             </div>
                             <div class="feedback__description">
                                 <h3 class="feedback__description_name">Василий</h3>
@@ -195,7 +216,7 @@
                                     <span>Дверь: </span><span>Восход</span>
                                 </p>
                                 <p class="feedback__description_comment">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
                                 </p>
                             </div>
                         </div>
@@ -203,7 +224,7 @@
                     <li class="feedbacks__list_item">
                         <div class="feedback">
                             <div class="feedback__photo">
-                                <img src="#" alt="">
+                                <img src="images/feadback.jpg" alt="">
                             </div>
                             <div class="feedback__description">
                                 <h3 class="feedback__description_name">Василий</h3>
@@ -211,39 +232,7 @@
                                     <span>Дверь: </span><span>Восход</span>
                                 </p>
                                 <p class="feedback__description_comment">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="feedbacks__list_item">
-                        <div class="feedback">
-                            <div class="feedback__photo">
-                                <img src="#" alt="">
-                            </div>
-                            <div class="feedback__description">
-                                <h3 class="feedback__description_name">Василий</h3>
-                                <p class="feedback__description_door">
-                                    <span>Дверь: </span><span>Восход</span>
-                                </p>
-                                <p class="feedback__description_comment">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="feedbacks__list_item">
-                        <div class="feedback">
-                            <div class="feedback__photo">
-                                <img src="#" alt="">
-                            </div>
-                            <div class="feedback__description">
-                                <h3 class="feedback__description_name">Василий</h3>
-                                <p class="feedback__description_door">
-                                    <span>Дверь: </span><span>Восход</span>
-                                </p>
-                                <p class="feedback__description_comment">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque voluptatem, ea repellendus odio deserunt labore sequi nemo ab aut accusamus ullam nesciunt, laboriosam beatae! Sit aliquid ea eius labore?
                                 </p>
                             </div>
                         </div>

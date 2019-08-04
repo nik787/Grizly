@@ -73,7 +73,7 @@ function styles(){
 }
 
 function scripts(){
-    return gulp.src(paths.scripts.src, { sourcemaps: true })
+    return gulp.src(['src/scripts/jquery-3.4.1.min.js', 'src/scripts/owl.carousel.js', 'src/scripts/main.js'])
         .pipe(babel({
             presets: ['@babel/env']
         }))    
