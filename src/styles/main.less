@@ -346,3 +346,54 @@
         
     }
 }
+
+#contacts {
+    background: #eeeeee;
+    .contacts {
+        .section();
+        &__title {
+            .title();
+        }
+        &__content {
+            .row-flex();
+            margin-top: 70px;
+            justify-content: center;
+            &_form {
+                .col();
+                .size(5);
+                input, textarea, button {
+                    display: block;
+                    resize: none;
+                    padding: 15px;
+                    width: 70%;
+                    margin: 15px 0;
+                }
+                button {
+                    width: 40%;
+                }
+            }
+            &_container {
+                .col();
+                .size(5);
+                .contact {
+
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    background: @menu;
+    .footer {
+        .row-flex();
+        justify-content: space-between;
+        color: #fff;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        a {
+            font-size: 0;
+        }
+    }
+}

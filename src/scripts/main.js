@@ -26,3 +26,7 @@ $(".navigation__list").on("click","a", function (event) {
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({scrollTop: top}, 1500);
 });
+
+$('#form2-tel').on("click", function() {
+    $('#form2-tel').attr({"value":"+7"})
+})
