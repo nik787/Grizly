@@ -1,0 +1,49 @@
+#feedbacks {
+    .feedbacks {
+        .section();
+        &__title {
+            .title();
+        }
+        &__list {
+            
+            .size(10);
+            margin: 70px auto 0;
+            
+            &_item {
+                .feedback {
+                    .row-flex();
+                    padding: 15px;
+                    background: #eee;
+                    border: 2px solid rgba(128, 128, 128, 0.226);
+
+                    &__photo {
+                        .col();
+                        .size(4);
+                        .size-sm(12);
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    &__description {
+                        .col();
+                        .size(8);
+                        .size-sm(12);
+                        &_name {
+                            .h3();
+                        }
+                        &_door {
+                            .h4();
+                        }
+                        &_comment {
+                            margin-top: 3vh;
+                            font-size: 2vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .owl-theme .owl-nav {
+        
+    }
+}

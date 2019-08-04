@@ -1,12 +1,15 @@
-@import "smart-grid.less";
-@import "color.less";
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
+@import "smart-grid.less";
+@import "color.less";
 @import "prom.less";
 @import "navigation.less";
 @import "header.less";
 @import "advantages.less";
 @import "catalog.less";
+@import "feedbacks.less";
+@import "contacts.less";
+@import "footer.less";
 
 
 
@@ -17,120 +20,7 @@
 
 
 
-#feedbacks {
-    .feedbacks {
-        .section();
-        &__title {
-            .title();
-        }
-        &__list {
-            
-            .size(10);
-            margin: 70px auto 0;
-            
-            &_item {
-                .feedback {
-                    .row-flex();
-                    padding: 15px;
-                    background: #eee;
-                    border: 2px solid rgba(128, 128, 128, 0.226);
 
-                    &__photo {
-                        .col();
-                        .size(4);
-                        .size-sm(12);
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    &__description {
-                        .col();
-                        .size(8);
-                        .size-sm(12);
-                        &_name {
-                            .h3();
-                        }
-                        &_door {
-                            .h4();
-                        }
-                        &_comment {
-                            margin-top: 3vh;
-                            font-size: 2vh;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .owl-theme .owl-nav {
-        
-    }
-}
 
-#contacts {
-    background: #eeeeee;
-    .contacts {
-        .section();
-        &__title {
-            .title();
-        }
-        &__content {
-            .row-flex();
-            margin-top: 70px;
-            justify-content: center;
-            @media screen and (max-width: @break_sm) {
-                flex-direction: column-reverse;
-                .contacts__content_container {
-                    margin: 0 auto 50px;
 
-                }
-            }
-            &_form {
-                .col();
-                .size(5);
-                .size-sm(12);
-                
-                input, textarea, button {
-                    display: block;
-                    resize: none;
-                    padding: 15px;
-                    width: 70%;
-                    margin: 15px auto;
-                }
-                button {
-                    width: 40%;
-                }
-            }
-            &_container {
-                .col();
-                .size(5);
-                .size-sm(12);
-                .contact {
-                    
-                }
-            }
-        }
-    }
-}
 
-#footer {
-    background: @menu;
-    .footer {
-        .row-flex();
-        justify-content: space-between;
-        color: #fff;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        @media screen and (max-width: @break_sm) {
-            flex-direction: column;
-            text-align: center;
-            .footer__copyright {
-                margin-bottom: 30px;
-            }
-
-        }
-        a {
-            font-size: 0;
-        }
-    }
-}

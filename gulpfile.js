@@ -115,7 +115,7 @@ function watch() {
     });
 
     gulp.watch(paths.scripts.src, scripts);
-    gulp.watch(paths.styles.src, styles);
+    gulp.watch('src/styles/**/*.less', styles);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.html.src, html);
     gulp.watch(paths.pug.src, pugg);

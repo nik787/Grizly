@@ -1,0 +1,21 @@
+#footer {
+    background: @menu;
+    .footer {
+        .row-flex();
+        justify-content: space-between;
+        color: #fff;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        @media screen and (max-width: @break_sm) {
+            flex-direction: column;
+            text-align: center;
+            .footer__copyright {
+                margin-bottom: 30px;
+            }
+
+        }
+        a {
+            font-size: 0;
+        }
+    }
+}

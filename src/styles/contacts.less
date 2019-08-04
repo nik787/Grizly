@@ -1,0 +1,45 @@
+#contacts {
+    background: #eeeeee;
+    .contacts {
+        .section();
+        &__title {
+            .title();
+        }
+        &__content {
+            .row-flex();
+            margin-top: 70px;
+            justify-content: center;
+            @media screen and (max-width: @break_sm) {
+                flex-direction: column-reverse;
+                .contacts__content_container {
+                    margin: 0 auto 50px;
+
+                }
+            }
+            &_form {
+                .col();
+                .size(5);
+                .size-sm(12);
+                
+                input, textarea, button {
+                    display: block;
+                    resize: none;
+                    padding: 15px;
+                    width: 70%;
+                    margin: 15px auto;
+                }
+                button {
+                    width: 40%;
+                }
+            }
+            &_container {
+                .col();
+                .size(5);
+                .size-sm(12);
+                .contact {
+                    
+                }
+            }
+        }
+    }
+}

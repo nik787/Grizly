@@ -17,17 +17,23 @@ $('.feedbacks__list').owlCarousel({
 });
 $('.catalog__list').owlCarousel({
     loop:true,
-    margin:30,
+    margin:50,
+    autoWidth:true,
     nav:false,
+    responsiveClass: true,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:1
+            items:1,
+            nav:false,
+            loop:true
+
         },
         1000:{
-            items:4
+            items:5,
+            loop:false
         }
     }
 })
