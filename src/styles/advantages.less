@@ -34,11 +34,24 @@
             margin: 1vh auto;
             background: #eeeeee;
             padding: 10px;
+            &:hover {
+                .advantages__item_img {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
             .advantages__item_img {
-                width: 200px;
+                width: 500px;
+                align-self: center;
+                transition: all 0.5s;
                 margin: 0 auto;
+                box-sizing: border-box;
+                overflow: hidden;
                 img {
                     width: 200px;
+                    transition: all 0.5s;
+
                 }
             }
             
