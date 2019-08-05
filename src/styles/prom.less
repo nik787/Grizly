@@ -1,14 +1,10 @@
-.title() {
-    font-size: 4vh;
-    text-align: center;
-    color: @title;
-}
+
 .section() {
     padding-top: 12vh; 
     padding-bottom: 12vh; 
 }
 .button() {
-    margin-top: 20px;
+    margin: 70px auto 0;
     padding: 15px;
     border: 1px solid #fff;
     border-radius: 3px;
@@ -18,6 +14,7 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.5s;
+    width: 250px;
     &:hover {
         background: #fff;
         color: #000;
@@ -30,14 +27,35 @@
 }
 .h1() {
     font-size: 6vh;
+    font-weight: bold;
     line-height: 1;
     color: @header-title;
+    @media screen and (max-width: @break_xs) {
+        font-size: 5vh;
+    }
+}
+.title() {
+    font-size: 2em;
+    text-align: center;
+    color: @title;
+    @media screen and (max-width: @break_xs) {
+        font-size: 1.5em;
+    }
 }
 .h3() {
-    font-size: 2.5vh;
+    font-size: 1.5em;
+    @media screen and (max-width: @break_xs) {
+        font-size: 1.2em;
+    }
 }
 .h4() {
     font-size: 2vh;
+}
+.text() {
+    font-size: 1em;
+    @media screen and (max-width: @break_xs) {
+        font-size: 0.8em;
+    }
 }
 
 .reset();

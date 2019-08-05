@@ -5,7 +5,7 @@
     }
     &__subtitle {
         text-align: center;
-        font-size: 2vh;
+        .text();
         margin-top: 3vh;
     }
     &__list {
@@ -21,6 +21,10 @@
             .advantages__list_item, .advantages__list_item:nth-child(odd) {
                 flex-direction: column;
                 justify-content: center;
+                text-align: center;
+            }
+            .advantages__item_img {
+                margin: 0 auto;
             }
         }
         
@@ -34,6 +38,7 @@
             margin: 1vh auto;
             background: #eeeeee;
             padding: 10px;
+            
             &:hover {
                 .advantages__item_img {
                     img {
@@ -42,26 +47,22 @@
                 }
             }
             .advantages__item_img {
-                width: 500px;
-                align-self: center;
-                transition: all 0.5s;
-                margin: 0 auto;
-                box-sizing: border-box;
+                .size(12);
+                .size-lg(8);
                 overflow: hidden;
                 img {
-                    width: 200px;
-                    transition: all 0.5s;
-
+                    transition: all 0.4s;
                 }
             }
             
             .advantages__item_description {
-                margin: 20px;
+                padding: 0 20px;
                 h3 {
                     .h3();
                 }
                 p {
                     margin-top: 1vh;
+                    .text();
                 }
             }
         }

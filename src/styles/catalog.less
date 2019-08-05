@@ -1,29 +1,31 @@
 #catalog {
     background: #eeeeee;
-    height: 100%;
     .catalog {
+        @media screen and(max-width: @break_xs) {
+            .catalog {
+                &__list {
+                    justify-content: center;
+                }
+            }
+        }
         .section();
-        height: 100%;
 
         &__title {
             .title();
         }
         &__list {
             .row-flex();
-            justify-content: space-around;
-            margin: 10vh auto 0;
-            position: relative;
-            height: 100%;
-
+            justify-content: space-between;
+            margin: 10vh 0;
             &_item {
-                align-self: flex-end;
-                margin: 0 auto;
-                
-
+                .col();
+                .size(3);
+                .size-lg(6);
+                .size-sm(6);
+                .size-xs(11);
                 .product {
                     text-decoration: none;
                     color: @title;
-                    .size(12);
                     &:hover {
                         .product__item_button {
                             opacity: 1;
@@ -42,11 +44,14 @@
                     }
                     &__item {
                         position: relative;
-                        overflow: hidden;
-                        height: auto;
+                        width: 100%;
+                        max-width: 250px;
+                        height: 440px;
+                        margin: 0 auto;
+
                         &_img {
-                            width: 250px;
-                            height: 440px;
+                            width: inherit;
+                            height: inherit;
                         }
                         &_button {
                             position: absolute;

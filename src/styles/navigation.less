@@ -13,18 +13,19 @@
             .navigation__list {
                 display: flex;
                 flex-direction: column;
-                position: fixed;
+                position: absolute;
                 text-align: center;
-                right: -110%;
-                top: 105px;
+                top: -500%;
                 width: 100%;
+                height: 100vh;
                 transition: all 0.5s;
+                
                 
                 &_item {
                     width: 100%;
-                    background: @menu;
                     padding: 15px;
                     border-bottom: 1px solid #000;
+                    background: @menu;
                     transition: background 0.3s;
                     &:hover {
                         background: #000;
@@ -38,6 +39,10 @@
                 display: block;
             }
             
+        }
+        &__logo {
+            width: 20%;
+            max-width: 133px;
         }
         &__list {
             .row-flex();
@@ -58,7 +63,7 @@
                 }
             }
             &.active {
-                right: 8px;
+                // right: 8px;
             }
         }
         &__burger {
@@ -66,8 +71,8 @@
             position: relative;
             margin: 0;
             padding: 0;
-            width: 75px;
-            height: 75px;
+            width: 55px;
+            height: 20px;
             font-size: 0;
             text-indent: -9999px;
             appearance: none;
@@ -75,39 +80,42 @@
             border-radius: none;
             border: none;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background .3s;
             &:focus {
                 outline: none;
             }
             span {
                 display: block;
                 position: absolute;
-                top: 35px;
+                top: 10px;
                 left: 18px;
                 right: 18px;
-                height: 3px;
-                background: white;
-                transition: transform 0.3s;
+                height: 2px;
+                background: #fff;
+                transition: transform .3s;
                 &::before {
                     .after();
-                    top: -15px;
+                    top: -5px;
                     transform-origin: top right;
-                    transition: transform 0.3s, width 0.3s, top 0.3s;
+                    transition: transform .3s,width .3s,top .3s;
                 }
                 &::after {
                     .after();
-                    bottom: -15px;
+                    bottom: -5px;
                     transform-origin: bottom right;
-                    transition: transform 0.3s, width 0.3s, bottom 0.3s;
+                    transition: transform .3s,width .3s,bottom .3s;
                 }
                 .after() {
                     position: absolute;
                     display: block;
-                    left: 0;
+                    left: 0px;
                     width: 100%;
-                    height: 3px;
+                    height: 2px;
                     background-color: #fff;
                     content: "";
+                    transform-origin: top right;
+                    transition: transform .3s,width .3s,top .3s;
+                    
                 }
                 
             }
@@ -116,11 +124,11 @@
                     transform: rotate(-180deg);
                     &::before {
                         width: 50%;
-                        transform: translateX(-4px) translateY(6px) rotate(-30deg);
+                        transform: translateX(-9px) translateY(7px) rotate(230deg);
                     }
                     &::after {
                         width: 50%;
-                        transform: translateX(-4px) translateY(-5px) rotate(33deg);
+                        transform: translateX(-9px) translateY(-7px) rotate(135deg);
                     }
                 }
             }
