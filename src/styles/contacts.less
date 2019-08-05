@@ -8,7 +8,7 @@
         &__content {
             .row-flex();
             margin-top: 70px;
-            justify-content: center;
+            justify-content: space-between;
             @media screen and (max-width: @break_sm) {
                 flex-direction: column-reverse;
                 .contacts__content_container {
@@ -34,10 +34,16 @@
             }
             &_container {
                 .col();
-                .size(5);
+                .size(7);
                 .size-sm(12);
                 .contact {
-                    
+                    &__row {
+                        border-bottom: 1px solid rgba(150, 150, 150, 0.767);
+                        .contact__row_title, .contact__row_content {
+                            padding: 15px 10px;
+                            border-left: 1px solid rgba(150, 150, 150, 0.767); 
+                        }
+                    }
                 }
             }
         }
