@@ -10,6 +10,12 @@ $(window).on('load', function () {
     $('.header__content_popup .popup').on('click', function() {
         closeHeaderPopup();
     });
+    $('#form1').ajaxForm(function() { 
+        alert("Thank you for your comment!"); 
+    });
+    $('#form2').ajaxForm(function() { 
+        alert("Thank you for your comment!"); 
+    });
   })
 
 
