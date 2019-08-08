@@ -60,10 +60,10 @@ function styles(){
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
         .pipe(less())
-        // .pipe(autoprefixer({
-        //     browsers: ['> 0.1%'],
-        //     cascade: false
-        // }))
+        .pipe(autoprefixer({
+            browsers: ['> 0.1%'],
+            cascade: false
+        }))
         .pipe(cleanCSS({
             level: 2
         }))
