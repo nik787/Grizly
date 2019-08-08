@@ -2,6 +2,8 @@
     background: @menu;
     .footer {
         .row-flex();
+        .text();
+        line-height: 1;
         justify-content: space-between;
         color: #fff;
         padding-top: 25px;
@@ -14,8 +16,29 @@
             }
 
         }
-        a {
-            font-size: 0;
+        &__social {
+            &_links {
+                
+                vertical-align: middle;
+            }
+        }
+        a { 
+            font-size: 1.2rem;
+            display:inline-block;
+            vertical-align: middle;
+            color: #fff;
+            margin: 5px;
+            &.icon-vk {
+                &:hover {
+                    color: rgb(75,116,165);
+                    
+                }
+            }
+            &.icon-instagram {
+                &:hover {
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                }
+            }
         }
     }
 }
