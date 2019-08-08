@@ -1,8 +1,32 @@
-$(".navigation__burger").on("click", function() {
-    $(".navigation__burger").toggleClass("is-active");
-    $(".navigation__list").toggleClass("active");
-    checkNav();
-});
+$(window).on('load', function () {
+    $(".navigation__burger").on("click", function() {
+        $(".navigation__burger").toggleClass("is-active");
+        $(".navigation__list").toggleClass("active");
+        checkNav();
+    });
+    $('.header__content_button .button').on('click', function() {
+        openHeaderPopup();
+    });
+    $('.header__content_popup .popup').on('click', function() {
+        closeHeaderPopup();
+    });
+  })
+
+
+
+
+
+function openHeaderPopup() {
+    $('.header__content_popup').addClass("active");
+}
+function closeHeaderPopup() {
+    $('.header__content_popup').removeClass("active");
+}
+
+
+
+
+
 
 function checkNav() {
     let top = $(".navigation").innerHeight();
@@ -23,34 +47,6 @@ $(".navigation__list").on("click","a", function (event) {
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({scrollTop: top}, 1500);
 });
-// $('.catalog__list').owlCarousel({
-//     loop:true,
-//     margin:15,
-//     autoWidth:true,
-//     nav:false,
-//     responsiveClass: true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:1,
-//             nav:false,
-//             loop:true
-
-//         },
-//         1000:{
-//             items:2,
-//             loop:false,
-//             nav:true
-//         },
-//         1400:{
-//             items:3,
-//             loop:false,
-//             nav:false,
-//         }
-//     }
-// })
 $('.feedbacks__list').owlCarousel({
   loop:true,
   margin:30,

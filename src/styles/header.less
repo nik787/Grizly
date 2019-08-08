@@ -30,10 +30,53 @@
                 .button();
             }
         }
-        &_form {
+        &_popup {
             display: none;
             position: fixed;
-            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &.active {
+                display: block;
+            }
+            .popup {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .form {
+                position: relative;
+                top: 40%;
+                background: #fff;
+                .size(4);
+                .size-lg(8);
+                .size-md(8);
+                .size-sm(10);
+                margin: 0 auto;
+                height: auto;
+                padding: 5px 20px;
+                z-index: 9999;
+                input, textarea, button {
+                    .text();
+                    display: block;
+                    resize: none;
+                    padding: 15px;
+                    width: 70%;
+                    margin: 15px auto;
+                    border: 1px solid #c0a97a;
+                    border-radius: 0;
+                }
+                button {
+                    width: 40%;
+                    &:hover {
+                        background: #c0a97a;
+                        color: #fff;
+                    }
+                }
+            }
+            
         }
     }
 }
