@@ -85,6 +85,7 @@ function scripts(){
         .pipe(browserSync.stream());
 }
 
+
 function images() {
     return gulp.src(paths.images.src, { sourcemaps: true })
         .pipe(imagemin([
