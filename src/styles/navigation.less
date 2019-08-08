@@ -18,15 +18,11 @@
                 top: -500%;
                 width: 100%;
                 height: 100vh;
-                transition: all 0.5s;
-                
-                
                 &_item {
                     width: 100%;
                     padding: 15px;
                     border-bottom: 1px solid #000;
                     background: @menu;
-                    transition: background 0.3s;
                     &:hover {
                         background: #000;
                     }
@@ -50,7 +46,7 @@
             &_item {
                 margin: 0 40px 0 0;
                 color: @nav-item;
-                font-size: 20px;
+                font-size: 1rem;
                 &:hover {
                     color: @nav-item-hover;
                 }
@@ -80,7 +76,6 @@
             border-radius: none;
             border: none;
             cursor: pointer;
-            transition: background .3s;
             &:focus {
                 outline: none;
             }
@@ -92,18 +87,15 @@
                 right: 18px;
                 height: 2px;
                 background: #fff;
-                transition: transform .3s;
                 &::before {
                     .after();
                     top: -5px;
                     transform-origin: top right;
-                    transition: transform .3s,width .3s,top .3s;
                 }
                 &::after {
                     .after();
                     bottom: -5px;
                     transform-origin: bottom right;
-                    transition: transform .3s,width .3s,bottom .3s;
                 }
                 .after() {
                     position: absolute;
@@ -114,7 +106,6 @@
                     background-color: #fff;
                     content: "";
                     transform-origin: top right;
-                    transition: transform .3s,width .3s,top .3s;
                     
                 }
                 

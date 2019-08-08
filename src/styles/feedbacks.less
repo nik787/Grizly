@@ -1,9 +1,6 @@
 #feedbacks {
     .feedbacks {
         .section();
-        &__title {
-            .title();
-        }
         &__list {
             position: relative;
             .size(10);
@@ -32,11 +29,11 @@
                             .h3();
                         }
                         &_door {
-                            .h4();
+                            .text();
                         }
                         &_comment {
+                            .text();
                             margin-top: 3vh;
-                            font-size: 2vh;
                         }
                     }
                 }
@@ -54,7 +51,6 @@
         }
         .owl-prev, .owl-next {
             position: absolute;
-            transition: all 0.4s;
             &:hover {
                 background: transparent;
                 transform: scale(1.2);

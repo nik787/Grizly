@@ -1,0 +1,16 @@
+.fontSize(@fxs, @fxl, @wxs, @wxl, @val) {
+    @font-size-xs: e("@{fxs}@{val}");
+    @font-size-xl: e("@{fxl}@{val}");
+    @min-width-XS: e("@{wxs}@{val}");
+    @min-width-XL: e("@{wxl}@{val}");
+    @font-size: calc((100vw - @min-width-XS)/(@wxl - @wxs) * (@fxl - @fxs) + @font-size-xs);
+    
+    font-size: @font-size-xs;
+    @media screen and (min-width: @min-width-XS) {
+      font-size: @font-size;
+    };
+    @media screen and (min-width: @min-width-XL) {
+      font-size: @font-size-xl;
+    };
+    
+}

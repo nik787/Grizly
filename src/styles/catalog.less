@@ -9,10 +9,6 @@
             }
         }
         .section();
-
-        &__title {
-            .title();
-        }
         &__list {
             .row-flex();
             justify-content: space-between;
@@ -54,6 +50,7 @@
                             height: inherit;
                         }
                         &_button {
+                            .text();
                             position: absolute;
                             left: 0;
                             top: 0;
@@ -62,11 +59,9 @@
                             margin: 0 auto;
                             background: rgba(0, 0, 0, .8);
                             opacity: 0;
-                            transition: .3s ease-in-out;
                             .button {
                                 text-decoration: none;
                                 color: #c0a97a;
-                                font-size: 12px;
                                 width: 140px;
                                 height: 40px;
                                 line-height: 40px;
@@ -75,7 +70,6 @@
                                 left: 50%;
                                 border: 2px solid #c0a97a;
                                 transform: translate(-50%, -50%) scale(0);
-                                transition: .3s ease-in-out;
                                 text-align: center;
                                 background: black;
                             }
@@ -90,7 +84,6 @@
                             color: #2e2e2e;
                             font-weight: 600;
                             position: relative;
-                            transition: .3s ease-in-out;
                             margin: 15px 0 5px;
                             padding-bottom: 7px;
                             &:after {
@@ -102,11 +95,10 @@
                                 left: 50%;
                                 margin-left: -20px;
                                 bottom: 0;
-                                transition: .3s ease-in-out;
                             }
                         }
                         &_price {
-                            font-size: 20px;
+                            .text();
                             color: #c0a97a;
                             font-weight: 700;
                             &::after {

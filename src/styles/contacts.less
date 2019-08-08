@@ -2,9 +2,6 @@
     background: #eeeeee;
     .contacts {
         .section();
-        &__title {
-            .title();
-        }
         &__content {
             .row-flex();
             margin-top: 70px;
@@ -22,14 +19,21 @@
                 .size-sm(12);
                 
                 input, textarea, button {
+                    .text();
                     display: block;
                     resize: none;
                     padding: 15px;
                     width: 70%;
                     margin: 15px auto;
+                    border: 1px solid #c0a97a;
+                    border-radius: 0;
                 }
                 button {
                     width: 40%;
+                    &:hover {
+                        background: #c0a97a;
+                        color: #fff;
+                    }
                 }
             }
             &_container {
@@ -37,13 +41,57 @@
                 .size(7);
                 .size-sm(12);
                 .contact {
-                    &__row {
-                        border-bottom: 1px solid rgba(150, 150, 150, 0.767);
-                        .contact__row_title, .contact__row_content {
-                            padding: 15px 10px;
-                            border-left: 1px solid rgba(150, 150, 150, 0.767); 
+                    .content() {
+                        .row-flex();
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        justify-content: space-between;
+                        border-bottom: 1px solid gray;
+                    }
+                    .content-title() {
+                        font-size: 1.2rem;
+                        .col();
+                        .size(5);
+                    }
+                    .content-text() {
+                        font-size: 1rem;
+                        .col();
+                        .size(6);
+                    }
+                    &__addr {
+                        .content();
+                        &_title {
+                            .content-title();
+                        }
+                        &_content {
+                            .content-text();
                         }
                     }
+                    &__number {
+                        &_sales {
+                            .content();
+                        }
+                        &_admin {
+                            .content();
+                        }
+                        &_title {
+                            .content-title();
+                        }
+                        &_content {
+                            .content-text();
+                        }
+                    }
+                    &__email {
+                        .content();
+                        &_title {
+                            .content-title();
+                        }
+                        &_content {
+                            .content-text();
+                        }
+                        
+                    }
+                    
                 }
             }
         }

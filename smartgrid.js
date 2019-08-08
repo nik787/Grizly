@@ -4,34 +4,29 @@ const smartgrid = require('smart-grid');
 const settings = {
     outputStyle: 'less', /* less || scss || sass || styl */
     columns: 12, /* number of grid columns */
-    offset: '16px', /* gutter width px || % || rem */
+    offset: '30px', /* gutter width px || % || rem */
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
-        maxWidth: '1640px', /* max-width оn very large screen */
-        fields: '100px' /* side fields */
+        maxWidth: '1600px', /* max-width оn very large screen */
+        fields: '30px' /* side fields */
     },
     breakPoints: {
         lg: {
-            width: '1088px',
-            fields: '40px' 
+            width: '1100px', /* -> @media (max-width: 1100px) */
         },
-        slg: {
-            width: '1004px'
+        md: {
+            width: '960px'
         },
         sm: {
             width: '780px',
-            fields: '15px'
+            fields: '15px' /* set fields only if you want to change container.fields */
         },
         xs: {
-            width: '560px',
-            fields: '15px'
-        },
-        xxs: {
-            width: '320px'
+            width: '560px'
         }
         /* 
         We can create any quantity of break points.
- 
+
         some_name: {
             width: 'Npx',
             fields: 'N(px|%|rem)',
