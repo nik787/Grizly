@@ -1,24 +1,32 @@
 .reset();
-
+:root {
+    box-sizing: border-box;
+    
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+* {
+    transition: all 0.3s ease-in-out;
+}   
 .wrapper {
     .wrapper();
 }
-* {
-    transition: all 0.5s ease-in-out;
-}
-html {
-    .fontSize(12, 18, 560, 1200, px);
+
+html, body {
+    .fontSize(12, 16, 560, 1200, px);
 }
 .section() {
-    padding-top: 15vh; 
-    padding-bottom: 15vh;
+    padding-top: 8.75em; 
+    padding-bottom: 8.75em;
     h2 {
         .h2();
     }
 }
 .button() {
-    margin: 70px auto 0;
-    padding: 15px;
+    padding: 1em 2em;
     border: 1px solid #fff;
     border-radius: 3px;
     font-size: 1rem;
@@ -26,7 +34,7 @@ html {
     background: transparent;
     color: #fff;
     text-decoration: none;
-    width: 250px;
+    display: inline-block;
     &:hover {
         background: #fff;
         color: #000;

@@ -1,6 +1,14 @@
 .header {
-    background: fixed  center / cover no-repeat rgba(0, 0, 0, 0.3) url(../images/header-bg.jpg);
-    min-height: 100vh;
+    position: relative;
+    background:  center center /cover no-repeat fixed rgba(0, 0, 0, 0.3) url(../images/header-bg.jpg);
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    align-content: center;
+    @media screen and(max-width: @break_sm) {
+        background:  center center /cover no-repeat fixed rgba(0, 0, 0, 0.3) url(../images/header-bg-mobile.jpg);        
+    }
     &::before {
         content: "";
         position: absolute;
@@ -8,24 +16,24 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 100vh;
         background: rgba(0, 0, 0, 0.4);
     }
     &__content {
         position: relative;
         z-index: 9998;
         text-align: center;
-        padding-top: 40vh;
+        padding: 15em 0;
         margin: 0 auto;
         &_title {
             .h1();
             margin: 0 auto;
             .header__content_subtitle {
-                font-size: 80%;
+                font-size: 2.5rem;
                 display: block;
             }
         }
         &_button {
+            margin: 3em auto;
             .button {
                 .button();
             }
@@ -56,15 +64,15 @@
                 .size-sm(10);
                 margin: 0 auto;
                 height: auto;
-                padding: 5px 20px;
+                padding: .5em 1.2em;
                 z-index: 9999;
                 input, textarea, button {
                     .text();
                     display: block;
                     resize: none;
-                    padding: 15px;
+                    padding: 1em;
                     width: 70%;
-                    margin: 15px auto;
+                    margin: 1em auto;
                     border: 1px solid #c0a97a;
                     border-radius: 0;
                 }

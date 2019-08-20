@@ -1,12 +1,12 @@
 @columns: 12;
 @atom: (100% / @columns);
 
-@break_lg: 1100px;
-@break_md: 960px;
-@break_sm: 780px;
-@break_xs: 560px;
+@break_lg: 68.75em;
+@break_md: 60em;
+@break_sm: 48.75em;
+@break_xs: 35em;
 
-@offset: 30px;
+@offset: 1.875em;
 @offset_lg: @offset;
 @offset_md: @offset;
 @offset_sm: @offset;
@@ -18,8 +18,8 @@
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 
-@fields: 30px;
-@fields_sm: 15px;
+@fields: 1.875em;
+@fields_sm: 1em;
 
 .wrapper-full(){
     padding-left: @fields;
@@ -42,7 +42,7 @@
 }
 
 .wrapper(){
-    max-width: 1600px;
+    max-width: 100em;
     margin: 0 auto;
     .wrapper-full();
 }
